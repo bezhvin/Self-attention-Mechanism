@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import torch
 
 class Trainer:
-    def __init__(self, model, optimizer, criterion, train_data, num_epoch):
+    def __init__(self, model, optimizer, criterion, train_data, num_epoch,vectorized=False):
         self.model = model
         self.optimizer = optimizer
         self.criterion = criterion
@@ -10,11 +10,14 @@ class Trainer:
         self.num_epoch = num_epoch
         self.train_loss=[]
         self.val_loss=[]
+        self.vectorized=vectorized
 
     def run(self, verbose=0):
         batch_size = self.data.batch_size
         for epoch in range(0,self.num_epoch):
             for batch_id, (x, y) in enumerate(self.data):
+                if self.vectorized:
+                    x= x.squeeze(1)
                 y_pred = self.model(x)
                 loss = self.criterion(y_pred, y)
                 self.optimizer.zero_grad()
