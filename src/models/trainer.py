@@ -25,6 +25,7 @@ class Trainer:
                 self.optimizer.step()
                 self.train_loss.append(loss.item())
             if verbose>0: print(f"epoch {epoch} is ended: train loss {torch.mean(torch.Tensor(self.train_loss))}")
+    
     def plot_error(self):
         plt.plot(range(len(self.train_loss)),self.train_loss,label='trainig_error')
         plt.plot(range(len(self.val_loss)),self.val_loss, label='validation error')

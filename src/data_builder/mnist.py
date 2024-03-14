@@ -3,7 +3,7 @@ import torchvision.datasets as dataset
 import torchvision.transforms as transforms
 import os
 import copy
-
+import numpy as np
 def image_flatten(x):
     return  x.flatten(start_dim=1)
 
@@ -28,3 +28,14 @@ class MNIST:
             
         return train_subset
 
+
+def image_patching(image, num_patch=16):
+    num_dim = image.dim()
+    for _ in range(4-num_dim):
+        image = image.unsqueeze(dim=0)
+    _,_, w, h = image.shape
+    patch_size = int(w//(np.sqrt(num_patch)))
+    stride=patch_size
+    unfolded = torch.nn.functional.unfold(image.to(torch.float), patch_size, stride=stride)
+    unfolded = unfolded.permute(0, 2, 1).reshape(-1, patch_size, patch_size)
+    return unfolded, patch_size
