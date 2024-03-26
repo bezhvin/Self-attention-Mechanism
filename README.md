@@ -7,6 +7,7 @@ Here is the content of this tutorial:
 * [Implicit attention](https://github.com/bezhvin/AttentionMechanism/blob/main/ImplicitAttention.ipynb): This notebook is a tutorial to underestand the concept of attention in machine learning and how actually every machine learning model needs to "attend" to gain reasonable performance, which is also called implicit attention. It is an interactive tutorial with images from MNIST dataset and fitting simple models trying to quantify and explain implicit attention mechanism in any model.
 
 * Self-attention:
-   * Concept and intuition:
+   * [Concept and intuition](https://github.com/bezhvin/AttentionMechanism/blob/main/self-attention%20intuition.ipynb): This tutorial provides a starting point to intuitively underestand self-attention as a way to represent each observarion in a sample based on the other observations via weighted averaging. A simple toy example is provided and the procedure is described step by step via simple itractive coding to get the concept of self attention.
+   * [Self-attention layer](https://github.com/bezhvin/AttentionMechanism/blob/main/self-attention_layer.ipynb): In this tutorial the self-attention layer in a more practical way is explained by defining the learnable components and explaining multi-head attention. MNIST data set is used again as usecase example of how to use self-attention for image data while the concept is straight forward for other data too.
 
 
