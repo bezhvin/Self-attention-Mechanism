@@ -4,9 +4,9 @@ Attention mechanism is maybe on the most effective steps in the realm of AI and 
 Here is the content of this tutorial:
 
 
-* [Implicit attention](https://github.com/bezhvin/AttentionMechanism/blob/main/ImplicitAttention.ipynb): This notebook is a tutorial to underestand the concept of attention in machine learning and how actually every machine learning model needs to "attend" to gaina reasonable performance, which is also called implicit attention.
+* [Implicit attention](https://github.com/bezhvin/AttentionMechanism/blob/main/ImplicitAttention.ipynb): This notebook is a tutorial to underestand the concept of attention in machine learning and how actually every machine learning model needs to "attend" to gain reasonable performance, which is also called implicit attention. It is an interactive tutorial with images from MNIST dataset and fitting simple models trying to quantify and explain implicit attention mechanism in any model.
 
 * Self-attention:
-  *  Concept and intuition:
+   * Concept and intuition:
 
 
